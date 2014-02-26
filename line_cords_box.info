@@ -1,0 +1,5 @@
+name = "Line Cords Box" 
+description = "Creates a related product block to display on the ubercart cart page when a specific attribute is chosen"
+core = 7.x 
+version = "7.x-1.0"
+package = Custom Modules
