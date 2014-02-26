@@ -1,0 +1,50 @@
+<?php
+
+/**
+ *@file
+ *line_cords_box.module
+ */
+ 
+ /**
+ *Implements hook_block_info().
+ */
+
+function line_cords_box_block_info() {
+   $blocks['line_cords_box'] = array(
+    'info' => t('Related Line Cords Block'),
+    
+  );
+
+  return $blocks;
+}
+
+/**
+ *Implements hook_block_view
+ */
+function line_cords_box_block_view($delta = '') {
+    $block = array();
+
+  switch ($delta) {
+    case 'line_cords_box':
+      $block['subject'] = t('Accessories');
+      $block['content'] = 
+	  
+	  $view = views_get_view('accesories_view');
+      print $view->execute_display('block_1');
+	  
+	  
+      break;
+
+  }
+  
+  //Check the items in the ubercart cart to see if any of the product has an attribute "color" with option "blue"
+  $items = uc_cart_get_contents();
+      foreach ($items as $item) {
+         if($item[color] = 'blue') {
+	 return $block;
+	 }
+      }
+  
+  
+  
+}
